@@ -15,12 +15,9 @@ public class Ex2 {
     private static int quantidadeDigitos(double d) {
         String i2 = String.valueOf(d);
 
-        System.out.println(i2.length());
-        System.out.println(i2.indexOf("."));
         int quantidadeDigitosDepoisVirgula = (i2.length() - i2.indexOf(".")) - 1;
         int quantidadeDigitosAntesVirgula = i2.indexOf(".");
         System.out.println(d);
-        System.out.println(i2);
         System.out.println("Qauntidade De números Antes da virgula: " + quantidadeDigitosAntesVirgula);
         System.out.println("Quantidade De números Depois da virgula: " + quantidadeDigitosDepoisVirgula);
 
