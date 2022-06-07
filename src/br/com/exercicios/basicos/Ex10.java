@@ -10,9 +10,7 @@ Fazer um programa para medir os reflexos do usuário. O programa deve:
 
 */
 
-import java.util.Calendar;
 import java.util.Scanner;
-
 public class Ex10 {
     public static void main(String[] args) throws InterruptedException {
         Scanner scan = new Scanner(System.in);

@@ -4,6 +4,7 @@ public class Slips {
     // O método string split() quebra uma determinada string em torno das correspondências da expressão regular fornecida.
     public static void main(String[] args)
     {
+
         System.out.println("TESTES DE SLIPS");
         System.out.println("---------TESTE 01-----------");
         String str = "geek@for@geekss";
