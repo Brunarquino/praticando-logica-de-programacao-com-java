@@ -2,7 +2,7 @@ package br.com.exercicios.poo.classes.questao5;
 
 public class Vetor {
 
-    private String[] vetores;
+    protected String[] vetores;
 
     public Vetor(int tamanhoVetor) {
         this.vetores = new String[tamanhoVetor];
@@ -38,6 +38,8 @@ public class Vetor {
     public String getVetores(int indice) {
         return vetores[indice];
     }
+
+
 
     public int size(){
         int v=0;
