@@ -9,7 +9,7 @@ public class Main {
         voo.ocupa(0);
         voo.ocupa(0);
 
-        for(int i = 0; i < 16 ;i++){
+        for(int i = 0; i < 105 ;i++){
             voo.ocupa(voo.proximaLivre());
         }
 

@@ -10,7 +10,7 @@ public class Voo {
     private int numero;
     private Data data;
     private String destino;
-    boolean[] cadeiras;
+    protected boolean[] cadeiras;
 
     private static int SEQUENCIAL = 00001;
 
@@ -19,6 +19,13 @@ public class Voo {
         this.data = data;
         this.destino = destino;
         cadeiras = new boolean[100];
+    }
+
+    public Voo(Data data, String destino, int maxVagas) {
+        this.numero = SEQUENCIAL++;
+        this.data = data;
+        this.destino = destino;
+        cadeiras = new boolean[maxVagas];
     }
 
     public int proximaLivre(){
@@ -30,7 +37,7 @@ public class Voo {
             }
             i++;
         }
-        return i;
+        return -1;
     }
 
     public boolean verifica(int i){
@@ -39,11 +46,15 @@ public class Voo {
     }
 
     public void ocupa(int i){
-        if(verifica(i)) {
-            System.out.println("CADEIRA JÁ ESTÁ OCUPADA!");
+        if(i > cadeiras.length | i < 0){
+            System.out.println("Está cadeira não existe");
         }else {
-            System.out.println("OCUPANDO CADEIRA..." );
-            cadeiras[i] = true;
+            if(verifica(i)) {
+                System.out.println("CADEIRA JÁ ESTÁ OCUPADA!");
+            }else {
+                System.out.println("OCUPANDO CADEIRA..." );
+                cadeiras[i] = true;
+            }
         }
     }
     public int vagas(){
@@ -66,6 +77,11 @@ public class Voo {
     }
     public Data getData() {
         return data;
+    }
+
+
+    protected void setCadeiras(boolean[] cadeiras) {
+        this.cadeiras = cadeiras;
     }
 
     @Override
